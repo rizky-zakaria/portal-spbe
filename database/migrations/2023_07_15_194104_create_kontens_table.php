@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('kategori_id');
             $table->text('konten');
+            $table->string('link');
             $table->timestamps();
         });
     }

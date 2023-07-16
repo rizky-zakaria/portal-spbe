@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
+use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class KategoriController extends Controller
 {
@@ -13,7 +16,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        $data = kategori::all();
+        return view('kategori.index', compact('data'));
     }
 
     /**
@@ -23,7 +27,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        $data = Menu::all();
+        return view('kategori.create', compact('data'));
     }
 
     /**
@@ -34,7 +39,12 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Kategori::create([
+            'kategori' => $request->kategori,
+            'slug' => Str::slug($request->kategori)
+        ]);
+
+        return redirect(url('kategori'));
     }
 
     /**
