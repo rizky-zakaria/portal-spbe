@@ -97,7 +97,7 @@
         <footer style=" background-color: #f8f8f8;  padding-top: 20px; padding-bottom: 20px; margin-top: 50px">
             <div class="row" style="margin-left: 80px">
                 <span style="color: rgb(rgb(95, 95, 95); font-family: 'Courier New', Courier, monospace">
-                    © 2023 Badan Kepegawaian Daerah Provinsi Gorontalo. All Rights Reserved
+                    © 2023 Kominfo Provinsi Gorontalo. All Rights Reserved
                 </span>
             </div>
         </footer>

@@ -28,7 +28,7 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="konten" rows="3"></textarea>
                 </div>
                 <div class="custom-file mb-3">
-                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="file" required>
+                    <input type="file" class="custom-file-input" id="validatedCustomFile" name="file">
                     <label class="custom-file-label" for="validatedCustomFile">Pilih file...</label>
                 </div>
 

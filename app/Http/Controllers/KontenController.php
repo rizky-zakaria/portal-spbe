@@ -62,6 +62,13 @@ class KontenController extends Controller
                 return redirect()->back();
             }
             return redirect(url('konten'));
+        } else {
+            $post = Konten::create([
+                'kategori_id' => $request->kategori,
+                'konten' => $request->konten,
+                'link' => '-'
+            ]);
+            return redirect(url('konten'));
         }
     }
 
