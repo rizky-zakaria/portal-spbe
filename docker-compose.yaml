@@ -18,7 +18,7 @@ services:
 
   db:
     image: mysql:5.7
-    container_name: portal-spbe
+    container_name: portal-spbe-mysql
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: portal-spbe
@@ -34,7 +34,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: portal-layanan-nginx
+    container_name: portal-spbe-nginx
     restart: unless-stopped
     ports:
       - 8000:80
