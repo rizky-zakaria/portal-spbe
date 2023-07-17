@@ -21,10 +21,10 @@ services:
     container_name: portal-spbe
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_DATABASE: portal-spbe
+      MYSQL_ROOT_PASSWORD: root-spbe
+      MYSQL_PASSWORD: root-spbe
+      MYSQL_USER: user-spbe
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
