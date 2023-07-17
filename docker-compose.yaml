@@ -4,7 +4,7 @@ services:
     build:
       args:
         user: zaki
-        uid: 2000
+        uid: 1000
       context: ./
       dockerfile: Dockerfile
     image: portal-spbe
@@ -21,10 +21,10 @@ services:
     container_name: portal-spbe-mysql
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: portal-spbe
-      MYSQL_ROOT_PASSWORD: root-spbe
-      MYSQL_PASSWORD: root-spbe
-      MYSQL_USER: user-spbe
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
@@ -34,7 +34,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: portal-spbe-nginx
+    container_name: portal-layanan-nginx
     restart: unless-stopped
     ports:
       - 8000:80
