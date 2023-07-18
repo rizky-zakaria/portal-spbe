@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.3"
 services:
   app:
     build:
@@ -18,7 +18,7 @@ services:
 
   db:
     image: mysql:5.7
-    container_name: portal-spbe-mysql
+    container_name: portal-spbe
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
@@ -34,7 +34,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: portal-layanan-nginx
+    container_name: portal-spbe-nginx
     restart: unless-stopped
     ports:
       - 8000:80
