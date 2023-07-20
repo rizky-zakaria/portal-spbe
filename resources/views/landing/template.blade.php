@@ -39,7 +39,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="">
                 <div class="row" style="margin-left: 50px">
-                    <img src="{{ asset('assets/logo/gorontalo.png') }}" alt="" style="width: 50px;">
+                    <img src="{{ asset('assets/logo/gorontalo.png') }}" alt="" style="width: 50px;"> SPBE
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
