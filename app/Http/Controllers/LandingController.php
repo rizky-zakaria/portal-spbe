@@ -117,9 +117,9 @@ class LandingController extends Controller
     public function cari(Request $request)
     {
         $data = Konten::join('kategoris', 'kategoris.id', '=', 'kontens.kategori_id')
-            ->where('kontens.konten', 'like', '%' . $request->cari . '%')
-            ->where('kategoris.kategori', 'like', '%' . $request->cari . '%')
-            ->get();
+            ->where('kontens.konten', 'like', "%{$request->cari}%")
+            ->orWhere('kategoris.kategori', 'like', "%{$request->cari}%")
+            ->get(['kontens.*']);
         return view('landing.cari', compact('data'));
     }
 }

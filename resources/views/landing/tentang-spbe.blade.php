@@ -11,7 +11,8 @@
                 <form action="{{ url('cari') }}" method="post">
                     @csrf
                     <div class="container" style="padding-left: 100px; padding-right: 100px">
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="cari..">
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="cari.."
+                            name="cari">
                         <button type="submit" class="btn btn-success mt-1"
                             style="width: 50%; margin-bottom: 150px">Cari</button>
                     </div>

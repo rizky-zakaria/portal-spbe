@@ -1,6 +1,7 @@
 @extends('landing.template')
 @section('konten')
-    <div class="main" style="background-image: url({{ asset('assets/img/bg-kantor-gub.jpg') }}); margin-top: 60px">
+    <div class="main"
+        style="background-image: url({{ asset('assets/img/bg-kantor-gub.jpg') }}); margin-top: 60px; background-size: cover; background-repeat: no-repeat">
         <div class="row  d-flex justify-content-center">
             {{-- <div class="col"> --}}
             <center>
@@ -11,9 +12,10 @@
                 <form action="{{ url('cari') }}" method="post">
                     @csrf
                     <div class="container" style="padding-left: 100px; padding-right: 100px">
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="cari..">
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="cari.."
+                            name="cari">
                         <button type="submit" class="btn btn-success mt-1"
-                            style="width: 50%; margin-bottom: 150px">Cari</button>
+                            style="width: 50%; margin-bottom: 250px">Cari</button>
                     </div>
                 </form>
             </center>
@@ -30,7 +32,7 @@
     </div>
     <div class="container-information d-flex justify-content-center mt-1">
         <div class="row">
-            <div class="col-3">
+            <div class="col" style="width: 200px">
                 <div class="card">
                     <div class="card-body">
                         <center>
@@ -40,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col" style="width: 200px">
                 <div class="card">
                     <div class="card-body">
                         <center>
@@ -50,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col" style="width: 200px">
                 <div class="card">
                     <div class="card-body">
                         <center>
@@ -60,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col" style="width: 200px">
                 <div class="card">
                     <div class="card-body">
                         <center>

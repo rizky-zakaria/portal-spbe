@@ -11,9 +11,10 @@
                 <form action="{{ url('cari') }}" method="post">
                     @csrf
                     <div class="container" style="padding-left: 100px; padding-right: 100px">
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="cari..">
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="cari.."
+                            name="cari">
                         <button type="submit" class="btn btn-success mt-1"
-                            style="width: 50%; margin-bottom: 150px">Cari</button>
+                            style="width: 50%; margin-bottom: 200px">Cari</button>
                     </div>
                 </form>
             </center>
@@ -30,7 +31,12 @@
         <div class="card-body">
             <ul class="list-group">
                 @foreach ($data as $item)
-                    <li class="list-group-item">{{ $item->konten }}</li>
+                    <li class="list-group-item">{{ $item->konten }}
+                        @if ($item->link !== '-')
+                            <a href="{{ asset('uploads/' . $item->link) }}" class="btn btn-primary"
+                                style="float: right">Lihat</a>
+                        @endif
+                    </li>
                 @endforeach
             </ul>
         </div>
