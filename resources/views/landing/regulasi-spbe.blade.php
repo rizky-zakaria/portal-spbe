@@ -1,6 +1,7 @@
 @extends('landing.template')
 @section('konten')
-    <div class="main" style="background-image: url({{ asset('assets/img/bg-kantor-gub.jpg') }}); margin-top: 60px">
+    <div class="main"
+        style="background-image: url({{ asset('assets/img/bg-kantor-gub.jpg') }}); margin-top: 60px;  background-size: cover; background-repeat: no-repeat">
         <div class="row  d-flex justify-content-center">
             {{-- <div class="col"> --}}
             <center>
